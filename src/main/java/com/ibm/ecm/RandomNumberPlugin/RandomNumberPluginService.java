@@ -5,7 +5,7 @@
 * Artyush
 * (c) Copyright IBA, 2013
 */
-package com.ibm.ecm.extension.CloseAccountPlugin;
+package com.ibm.ecm.RandomNumberPlugin;
 
 import java.io.PrintWriter;
 import java.io.Writer;
@@ -29,11 +29,9 @@ import com.ibm.ecm.extension.PluginService;
 import com.ibm.ecm.extension.PluginServiceCallbacks;
 
 /**
- * Class {@link }.
- * 
- * @author Artyush
+ * Class {@link RandomNumberPluginService}
  */
-public class CloseAccountService extends PluginService
+public class RandomNumberPluginService extends PluginService
 {
 
   /** 
