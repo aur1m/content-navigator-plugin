@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.ibm.ecm.context.PluginContext;
 import com.ibm.ecm.extension.*;
 import com.ibm.ecm.extension.Plugin;
 import com.ibm.ecm.extension.PluginAction;
@@ -48,6 +49,8 @@ public class RandomNumberPlugin extends Plugin {
 	 */
 	public void applicationInit(HttpServletRequest request,
 			PluginServiceCallbacks callbacks) throws Exception {
+
+        new PluginContext(callbacks.getLogger());
 	}
 
 	/**
