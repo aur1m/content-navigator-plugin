@@ -14,7 +14,6 @@ import java.util.ResourceBundle;
 public class PluginContext {
 
     private static final String messageBundleName = "messages";
-    private static final String configFileName = "plugin.properties";
 
     static  PluginContext instance;
     private Properties configs;
@@ -40,29 +39,5 @@ public class PluginContext {
     public String getI18nLabel(Locale locale, String key){
         return getResBundle(locale).getString(key);
     }
-
-    public String getConfigParam(String key){
-        if(configs == null) {
-            configs = new Properties();
-            InputStream inputStream = null;
-            try {
-                inputStream = getClass().getClassLoader().getResourceAsStream(configFileName);
-                if (inputStream == null) {
-                    throw new FileNotFoundException("Plugin configuration file '" + configFileName + "' not found in the classpath");
-                }
-                configs.load(inputStream);
-            } catch (Exception ex) {
-                // TODO log it
-            } finally {
-                try {
-                    assert inputStream != null;
-                    inputStream.close();
-                } catch (Exception ignored) {
-                }
-            }
-        }
-        return configs.getProperty(key);
-    }
-
 
 }

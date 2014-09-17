@@ -2,6 +2,7 @@ package com.ibm.ecm.RandomNumberPlugin;
 
 import java.util.Locale;
 
+import com.ibm.ecm.context.PluginContext;
 import com.ibm.ecm.extension.PluginAction;
 import com.ibm.json.java.JSONObject;
 
@@ -31,7 +32,7 @@ public class RandomNumberAction extends PluginAction {
 	 * @return A short description of the action.
 	 */
 	public String getName(Locale locale) {
-		return "GET Random Number Action";
+		return PluginContext.getIntstance().getI18nLabel(locale, "plugin.action.RandomNumberAction");
 	}
 
 	/**

@@ -72,7 +72,7 @@ public class RandomNumberPlugin extends Plugin {
 	 *       the language for this locale if it is translated.
 	 */
 	public String getName(Locale locale) {
-		return "RandomNumberPlugin";
+	    return PluginContext.getIntstance().getI18nLabel(locale, "plugin.name");
 	}
 
 	/**

@@ -21,7 +21,7 @@ define([
             this.logEntry("performAction", "items=" + itemList);
 
             var messageDialog = new MessageDialog({
-                text: "My message"
+                text: "Hello!"
             });
             messageDialog.show();
             this.logExit("performAction");
